@@ -1,45 +1,20 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Appviagem.MainPage"
-             Title="Viagem">
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
-        </Style>
-    </ContentPage.Resources>
+             x:Class="Appviagem.MainPage">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ver Pedágios" Clicked="ToolbarItem_Clicked_Somar" />
-        <ToolbarItem Text="Calcular custo" Clicked="ToolbarItem_Clicked_Add"/>
-    </ContentPage.ToolbarItems>
+    <StackLayout Padding="20">
+        <Label Text="Distância da Viagem (km):" />
+        <Entry x:Name="distanciaR" Placeholder="Informe a distância" />
 
-    <ContentPage.Content>
+        <Label Text="Eficiência de Combustível (km/L):" />
+        <Entry x:Name="eficienciaR" Placeholder="Informe a eficiencia" />
 
-        <VerticalStackLayout>
+        <Label Text="Custo do Combustível por Litro (R$):" />
+        <Entry x:Name="custocombustivelR" Placeholder="Informe o preço do combustível" />
 
-            <SearchBar x:Name="txt_search_origem" Margin="-10,0,0,0"
-                       Placeholder="Origem:"
-                       TextChanged="txt_search_origem_TextChanged"/>
+        <Button Text="Calcular" Clicked="calcularClicked" />
+    </StackLayout>
 
-            <SearchBar x:Name="txt_search_origem" Margin="-10,0,0,0"
-                   Placeholder="Destino:"
-                   TextChanged="txt_search_destino_TextChanged"/>
-
-            <SearchBar x:Name="txt_search" Margin="-10,0,0,0"
-                   Placeholder="Distância:"
-                   TextChanged="txt_search_distancia_TextChanged"/>
-
-            <SearchBar x:Name="txt_search" Margin="-10,0,0,0"
-                   Placeholder="Rendimento"
-                   TextChanged="txt_search_rendimento_TextChanged"/>
-
-            <SearchBar x:Name="txt_search" Margin="-10,0,0,0"
-                   Placeholder="Preço Combustível"
-                   TextChanged="txt_search_precocombustivel_TextChanged"/>
-
-
-        </VerticalStackLayout>
-
-    </ContentPage.Content>
 </ContentPage>
+
