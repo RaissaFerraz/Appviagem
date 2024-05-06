@@ -6,12 +6,11 @@ namespace Appviagem
 {
     public partial class MainPage : ContentPage
     {
-        private object resultLabel;
 
         public MainPage()
         {
             InitializeComponent();
-            SetupUI();
+
         }
 
         private void SetupUI()

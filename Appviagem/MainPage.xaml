@@ -3,7 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Appviagem.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+    </ContentPage.ToolbarItems>
+   
+
     <StackLayout Padding="20">
+        <Label Text="Origem:" />
+        <Entry x:Name="origemR" Placeholder="Informe a origem" />
+
+        <Label Text="Destino:" />
+        <Entry x:Name="destinoR" Placeholder="Informe o destino" />
+
+        <Label Text="Valor pedágio:" />
+        <Entry x:Name="pedagioR" Placeholder="Informe o valor do/s pedágio/s" />
+        
         <Label Text="Distância da Viagem (km):" />
         <Entry x:Name="distanciaR" Placeholder="Informe a distância" />
 
@@ -13,7 +27,6 @@
         <Label Text="Custo do Combustível por Litro (R$):" />
         <Entry x:Name="custocombustivelR" Placeholder="Informe o preço do combustível" />
 
-        <Button Text="Calcular" Clicked="calcularClicked" />
     </StackLayout>
 
 </ContentPage>
